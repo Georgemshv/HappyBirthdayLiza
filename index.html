@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            background-image: url('/liza.webp');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(91, 62, 155, 0.9); 
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+            z-index: 10;
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin: 0;
+            animation: slideInFromTop 1.5s ease-out;
+        }
+
+        p {
+            color: #e1bee7;
+            font-size: 1.1em;
+            margin-top: 20px;
+            line-height: 1.6;
+            text-align: left; /* ტექსტის გასწორება მარცხნივ */
+        }
+
+        button {
+            background-color: #8e24aa;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #6a1b9a;
+        }
+
+        .heart {
+            width: 20px;
+            height: 20px;
+            background-color: #f06292;
+            position: absolute;
+            top: -10px;
+            animation: fall 5s infinite;
+            transform: rotate(45deg);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: #f06292;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: -10px;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 1;
+                left: calc(100% * var(--left));
+            }
+            100% {
+                top: 110%;
+                opacity: 0;
+                left: calc(100% * var(--left));
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes popUp {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 95%;
+                height: auto;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, Lisa!</h1>
+        <button onclick="showMessage()">Click Me</button>
+        <p id="message" style="display: none;">
+            ჩემო ლიზა,<br><br>
+            დღევანდელ განსაკუთრებულ დღეს მთელი სიხარულით და ბედნიერებით ავღნიშნავ, რადგან შენ ხარ ის ადამიანი, რომელმაც ჩემი ცხოვრება შეცვალა და აავსო სიყვარულით სითბოთი და სიხარულით. შენი ღიმილი ჩემთვის კოსმოსის მთლიან ნათებას ნიშნავს, არადა რა ბნელია კოსმოსი რეალურად თუმცა ყველა ის სინათლის ფოტონი რაც კოსმოსშია პირდაპირ შენს ღიმილთან არის კავშირში! შენს გვერდით ყოველი წამი და წუთი საოცარია და ამ სამყაროში ყველაფერი ულამაზესია, როცა შენ ჩემთან ხარ.<br><br>
+            მინდა გისურვო უსასრულო ბედნიერება, სიხარული და ყოველი შენი ოცნების ახდენა. დღესაც როგორც ყოველდღე სულ მიხარია და მაბედნიერებს ის ფაქტი, რომ შენ ჩემი ხარ და მე შენი. შენ ხარ ჩემი სულიერება და ჩემი ყველაზე დიდი სიყვარული.<br><br>
+            მინდა გაგახარო და გითხრა, რომ ჩემთვის ყველაზე ძვირფასი ადამიანი ხარ და ყველაზე უნიკალური ოღონდ როგორი უნიკალური იცი? მხოლოდ 1 რომ არსებობს და არც წარსულში რომ იყო და არც მომავალში რომ იქნება არასდროს.<br><br>
+            მოკლედ<br><br>
+            გილოცავ დაბადების დღეს, ჩემო სიცოცხლევ და ჩემო ბედნიერებავ!<br><br>
+            მიყვარხარ უსასრულოდ.<br><br>
+            სიყვარულით,<br>
+            Odyssey
+        </p>
+    </div>
+
+    <script>
+        function showMessage() {
+            const message = document.getElementById('message');
+            message.style.display = 'block';
+            message.style.animation = 'popUp 1s ease-in-out';
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.setProperty('--left', Math.random());
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
